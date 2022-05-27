@@ -1,3 +1,11 @@
+Deploy Command
+ng add angular-cli-ghpages
+
+ng deploy --base-href=/my-angular-app/
+
+Reference
+https://www.syncfusion.com/blogs/post/easy-steps-to-host-an-angular-app-in-github-pages.aspx
+
 #1
 
 https://stackoverflow.com/questions/40726081/angular-cli-from-css-to-scss
