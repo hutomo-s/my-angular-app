@@ -1,0 +1,61 @@
+<h1>Calculator</h1>
+
+<div class="play-container">
+    <div>
+        Langkah 1: Input Bilangan Pertama
+    </div>
+
+    <div>
+        <input type="number" [(ngModel)]="inputFirstNumber" [disabled]="currentStep !== 1">
+    </div>
+
+    <div>
+        <button (click)="submit(1)" [disabled]="currentStep !== 1">Lanjut</button>
+    </div>
+</div>
+
+<div class="play-container" *ngIf="currentStep >= 2">
+    <div>
+        <p>Langkah 2: Input Operasi yang ingin digunakan</p>
+        <p>1. Penjumlahan</p>
+        <p>2. Pengurangan</p>
+        <p>3. Perkalian</p>
+        <p>4. Pembagian</p>
+    </div>
+
+    <div>
+        <input type="number" [(ngModel)]="inputOperation" [disabled]="currentStep !== 2">
+    </div>
+
+    <div>
+        <button (click)="submit(2)" [disabled]="currentStep !== 2">Lanjut</button>
+    </div>
+</div>
+
+<div class="play-container" *ngIf="currentStep >= 3">
+    <div>
+        Langkah 3: Input Bilangan Kedua
+    </div>
+
+    <div>
+        <input type="number" [(ngModel)]="inputSecondNumber" [disabled]="currentStep !== 3">
+    </div>
+
+    <div>
+        <button (click)="submit(3)" [disabled]="currentStep !== 3">Lanjut</button>
+    </div>
+</div>
+
+<div class="play-container" *ngIf="currentStep >= 4">
+    <div>
+        Langkah 4: Hasil operasi kedua bilangan
+    </div>
+
+    <div>
+        {{ inputFirstNumber }} {{ mathSign }} {{ inputSecondNumber}} = {{ resultNumber }}
+    </div>
+
+    <div>
+        <button (click)="submit(4)" [disabled]="currentStep !== 4">Ulangi Proses Step 1</button>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+#1
+
+https://stackoverflow.com/questions/40726081/angular-cli-from-css-to-scss
+
+https://javascript.plainenglish.io/step-by-step-guide-to-upgrade-your-angular-app-from-css-to-scss-fb347330fe28
+
+#2
+
+https://jasonwatmore.com/post/2019/06/25/angular-8-dynamic-reactive-forms-example
+
+https://stackblitz.com/edit/angular-8-dynamic-reactive-forms-example?file=app%2Fapp.component.ts
+
+#3
+
+https://www.tektutorialshub.com/angular/nested-formarray-example-add-form-fields-dynamically/
+https://stackblitz.com/edit/angular-nested-formarray-dynamic-forms?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts,src%2Fapp%2Fhello.component.ts

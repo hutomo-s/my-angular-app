@@ -1,0 +1,39 @@
+<h1>Courier</h1>
+
+<div class="play-container">
+  <form [formGroup]="counterForm" (ngSubmit)="submitStep2()">
+    <div formArrayName="counters">
+      <div *ngFor="let counter of counters().controls; let counterIndex=index">
+        <div
+          [formGroupName]="counterIndex"
+        >
+          Masukkan Jumlah Restoran Yang Dikunjungi:
+          <input type="number" formControlName="countResto" [disabled]="currentStep !== 1" />
+          <br />
+          <button type="button" (click)="submitStep1()" [disabled]="currentStep !== 1">Lanjut</button>
+  
+          <div formArrayName="restos">
+            <div
+              *ngFor="let skill of counterRestos(counterIndex).controls; let restoIndex=index"
+            >
+              <div [formGroupName]="restoIndex">
+                Jarak dari Restoran {{restoIndex}} ke Restoran {{ restoIndex + 1 }}:
+                <input type="text" formControlName="distance" /> km
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  
+    <button type="submit">Hitung</button>
+  
+  </form>
+</div>
+
+<div class="play-container">
+  <p>Total Jarak Tempuh adalah: {{ sumDistance }} km</p>
+  <p>Jumlah Bahan Bakar Yang Dibutuhkan adalah {{ sumFuel }} liter</p>
+</div>

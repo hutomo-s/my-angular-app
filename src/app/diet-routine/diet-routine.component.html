@@ -1,0 +1,22 @@
+
+<h1>Diet Routine</h1>
+
+<div class="play-container">
+    <div>
+        Jumlah Kalori Yang Anda Konsumsi Hari Ini
+    </div>
+
+    <div>
+        <input type="number" [(ngModel)]="inputCalories">
+    </div>
+
+    <div>
+        <button (click)="submit()">Kirim</button>
+    </div>
+</div>
+
+<div class="play-container">
+    <p>Hasil Perhitungan</p>
+    
+    <p>{{ suggestion }}</p>
+</div>

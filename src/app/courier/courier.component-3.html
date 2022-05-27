@@ -1,0 +1,48 @@
+<h1>Courier</h1>
+
+<div class="play-container">
+    <div>
+        Langkah 1: Masukkan Jumlah Restoran
+    </div>
+
+    <div>
+        <input type="number" [(ngModel)]="inputCountResto">
+    </div>
+
+    <div>
+        <button (click)="submitCountResto()">Lanjut</button>
+    </div>
+</div>
+
+<div class="play-container">
+    <div>
+        Langkah 2: Masukkan Jarak Tempuh Per Restoran
+    </div>
+
+    <form [formGroup]="restoForm" (ngSubmit)="onSubmit()">
+        <div formArrayName="admins">
+            <div *ngFor="let distance of distances().controls; let i = index">
+                <div [formGroup]="restoForm">
+                    <label>Jarak dari restoran {{ i }} ke restoran {{ i+1 }}</label>
+                    <input type="text" formControlName="distance" />
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+<template-comment>
+    <!--<button type="button" (click)="addEmployee()">Add Employee</button>-->
+  </template-comment>
+
+  <button (click)="removeCounterResto(counterIndex,restoIndex)">
+    Remove
+  </button>
+
+  <button type="button" (click)="addCounter()">Add Counter</button>
+  <button type="button" (click)="addCounterResto(counterIndex)">
+    Add Skill
+  </button>
